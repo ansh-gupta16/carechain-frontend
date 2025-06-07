@@ -1,0 +1,185 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
+.navbar {
+  background: #2c3e50;
+  color: white;
+  padding: 1rem;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  padding: 2rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.filters input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.ledger-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ledger-entry {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-left: 5px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.ledger-entry:hover {
+  border-left-color: #2ecc71;
+  transform: translateY(-2px);
+}
+
+.ledger-entry h3 {
+  margin: 0 0 0.5rem;
+}
+
+.ledger-entry p {
+  margin: 0.3rem 0;
+}
+
+.ledger-entry small {
+  color: #888;
+  font-size: 0.8rem;
+}
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.count-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.pagination-controls button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.pagination-controls button.active {
+  background: #2ecc71;
+}
+
+.pagination-controls button:hover {
+  background: #2980b9;
+}
+
+.status-filters {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.status-filter {
+  background-color: #ecf0f1;
+  color: #333;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.status-filter.active {
+  background-color: #3498db;
+  color: white;
+}
+
+.status-toggle {
+  padding: 0.3em 0.8em;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+.status-open {
+  background-color: #eafaf1;
+  color: #2ecc71;
+}
+.status-resolved {
+  background-color: #e7f2fc;
+  color: #3498db;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.mark-resolved-btn {
+  background: #2ecc71;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.mark-resolved-btn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}

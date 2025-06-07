@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CareChain Ledger</title>
+  <link rel="stylesheet" href="ledger.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <h1 class="logo">CareChain</h1>
+      <nav>
+        <a href="/navbar.html">Home</a>
+        <a href="/request-help.html">Request Help</a>
+        <a href="/ledger.html">Ledger</a>
+        <a href="/profile.html">Profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Ledger of Help Requests</h2>
+
+    <div class="controls">
+  <div class="filters">
+    <input type="text" id="searchName" placeholder="Search by name" />
+    <input type="date" id="filterDate" />
+    <select id="sortOrder">
+      <option value="newest">Newest First</option>
+      <option value="oldest">Oldest First</option>
+    </select>
+  </div>
+  <p id="totalCount" class="count-text">Total Requests: 0</p>
+</div>
+
+<div id="pagination" class="pagination-controls"></div>
+<div class="status-filters">
+  <button class="status-filter active" data-status="all">All</button>
+  <button class="status-filter" data-status="open">Open</button>
+  <button class="status-filter" data-status="resolved">Resolved</button>
+</div>
+
+<div id="ledgerList" class="ledger-list"></div>
+
+
+    <div id="ledgerList" class="ledger-list"></div>
+  </main>
+
+  <script src="ledger.js"></script>
+</body>
+</html>

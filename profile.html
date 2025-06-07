@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CareChain Profile</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <h1 class="logo">CareChain</h1>
+      <nav>
+        <a href="/navbar.html">Home</a>
+        <a href="/request-help.html">Request Help</a>
+        <a href="/ledger.html">Ledger</a>
+        <a href="/profile.html" class="active">Profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="profile-card">
+      <div class="avatar-container">
+  <div class="avatar" id="avatar">A</div>
+  <input type="file" id="avatarInput" accept="image/*" />
+  <button id="removeAvatarBtn" class="remove-avatar">Remove Avatar</button>
+</div>
+
+      <div class="profile-fields">
+        <label>
+          Name:
+          <input type="text" id="nameInput" />
+        </label>
+        <label>
+          Email:
+          <input type="email" id="emailInput" />
+        </label>
+        <label>
+          Bio:
+          <textarea id="bioInput" rows="3"></textarea>
+        </label>
+        <button id="saveBtn">Save Profile</button>
+      </div>
+    </section>
+
+    <section class="user-requests">
+      <h2>Your Submitted Help Requests</h2>
+      <div id="userRequests" class="request-list"></div>
+    </section>
+  </main>
+
+  <script src="profile.js"></script>
+</body>
+</html>

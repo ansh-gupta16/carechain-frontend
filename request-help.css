@@ -1,0 +1,115 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9fb;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background: #007bff;
+  color: white;
+  padding: 12px 24px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form input[type="text"],
+.form textarea,
+.form input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form button {
+  padding: 10px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: #0056b3;
+}
+
+#searchInput {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.requests {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.request-card {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.request-card:hover {
+  transform: translateY(-3px);
+}
+
+.request-card h3 {
+  margin: 0 0 8px;
+}
+
+.request-card p {
+  margin: 4px 0;
+  color: #555;
+}
+
+.request-card .anonymous {
+  font-style: italic;
+  color: #999;
+}
+

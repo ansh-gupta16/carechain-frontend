@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Request Help - CareChain</title>
+  <link rel="stylesheet" href="request-help.css" />
+</head>
+<body>
+  <header class="navbar"> 
+    <div class="navbar-container">
+      <h1 class="logo">CareChain</h1>
+      <nav>
+        <a href="/navbar.html">Home</a>
+        <a href="/request-help.html">Request Help</a>
+        <a href="/ledger.html">Ledger</a>
+        <a href="/profile.html">Profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Submit a Help Request</h2>
+    <form id="helpForm" class="form" >
+      <input type="text" placeholder="Your Name" id="name" required />
+      <input type="text" placeholder="Request Title" id="title" required />
+      <textarea placeholder="Describe your situation..." id="description" required></textarea>
+      <input type="file" id="proofFile" accept="image/*,application/pdf" />
+      <label>
+        <input type="checkbox" id="anonymous" />
+        Submit Anonymously
+      </label>
+      <button type="submit">Submit Request</button>
+    </form>
+
+    <hr />
+
+    <h2>Browse Help Requests</h2>
+    <input type="text" id="searchInput" placeholder="Search by title or keyword..." />
+
+    <div class="requests" id="requestsList">
+      <!-- Help requests will be inserted here -->
+    </div>
+  </main>
+
+  <script src="request-help.js"></script>
+
+</body>
+</html>
