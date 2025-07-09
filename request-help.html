@@ -21,17 +21,18 @@
 
   <main class="container">
     <h2>Submit a Help Request</h2>
-    <form id="helpForm" class="form" >
-      <input type="text" placeholder="Your Name" id="name" required />
-      <input type="text" placeholder="Request Title" id="title" required />
-      <textarea placeholder="Describe your situation..." id="description" required></textarea>
-      <input type="file" id="proofFile" accept="image/*,application/pdf" />
-      <label>
-        <input type="checkbox" id="anonymous" />
-        Submit Anonymously
-      </label>
-      <button type="submit">Submit Request</button>
-    </form>
+    <form id="helpForm" class="form">
+  <input type="text" placeholder="Your Name" id="name" required />
+  <input type="text" placeholder="Request Title" id="title" required />
+  <textarea placeholder="Describe your situation..." id="description" required></textarea>
+  <div class="location-group">
+    <input type="text" id="location" placeholder="Your city or area..." required />
+    <button type="button" id="detectLocationBtn">📍 Detect Location</button>
+    <small id="locationStatus" style="display: block; color: gray;"></small>
+  </div>
+  <label><input type="checkbox" id="anonymous" /> Submit Anonymously</label>
+  <button type="submit">Submit Request</button>
+</form>
 
     <hr />
 
