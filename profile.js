@@ -101,7 +101,7 @@ avatarInput.addEventListener("change", function () {
 // Fetch help requests submitted by this user
 async function fetchRequestsForUser(userName) {
   try {
-    const res = await fetch("https://carechain-backend.onrender.com/api/requests");
+    const res = await fetch(`https://carechain-backend.onrender.com/api/requests?name=${encodeURIComponent(userName)}`);
     const allRequests = await res.json();
 
     const userRequests = allRequests.filter(req =>
@@ -131,12 +131,16 @@ function renderRequests(requests) {
     const card = document.createElement("div");
     card.className = "request-card";
    card.innerHTML = `
-   <input type="text" class="edit-title" value="${req.title}" disabled />
-   <textarea class="edit-description" disabled>${req.description}</textarea>
-   <p><strong>Location:</strong> ${req.location || "N/A"}</p> 
-   <p><strong>Status:</strong> <span class="status-badge ${statusClass}">${status}</span></p> 
-   <small>Submitted on ${new Date(req.createdAt).toLocaleDateString()}</small> ... 
-    `;
+<input type="text" class="edit-title" value="${req.title}" disabled />
+
+<textarea class="edit-description" disabled>${req.description}</textarea> 
+<p><strong>Location:</strong> ${req.location || "N/A"}</p> 
+<p><strong>Status:</strong> <span class="status-badge ${statusClass}">${status}</span></p> 
+<small>Submitted on ${new Date(req.createdAt).toLocaleDateString()}</small> 
+<div class="actions"> <button class="edit-btn">Edit</button>
+ <button class="delete-btn">Delete</button>
+  <button class="save-btn" style="display:none;">Save</button>
+   <button class="cancel-btn" style="display:none;">Cancel</button> </div> `;
 
     const titleField = card.querySelector(".edit-title");
     const descField = card.querySelector(".edit-description");
